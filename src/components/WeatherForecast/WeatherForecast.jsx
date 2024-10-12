@@ -1,11 +1,18 @@
+import './WeatherForecast.css'
 
-const WeatherForecast = () => {
+// day: 'Mon',
+// img: 'http://res.cloudinary.com/jkeohan/image/upload/v1535732381/day.svg',
+// imgAlt: 'sun icon',
+// conditions: 'sunny',
+// time: 'Morning',
+
+const WeatherForecast = ({weather}) => {
     return (
         <div className="weather">
-            <h2>Day of the Week</h2>
-            <img src="" alt="" />
-            <p><span>conditions: </span>current weather conditions</p>
-            <p><span>time: </span>time of day</p>
+            <h2>{weather.day}</h2>
+            <img src={weather.img} alt={weather.alt} />
+            <p><span>conditions: </span>{weather.conditions}</p>
+            <p><span>time: </span>{weather.time}</p>
         </div>
     )
 }
